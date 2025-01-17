@@ -1,1 +1,46 @@
-@use '../../global/' as g;
+@use "../../global/" as g;
+
+.c-btn {
+  display: block;
+  text-align: center;
+  padding: g.fz(22);
+  background: #eee;
+  color: g.$text-color;
+  letter-spacing: .15em;
+  transition: 0.5s;
+  text-transform: uppercase;
+  border: 1px solid #D9D9D9;
+  width: 100%;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: g.fz(16);
+}
+.c-btn span {
+  position: relative;
+}
+.c-btn span::before,
+.c-btn span::after {
+  content: "";
+  position: absolute;
+}
+.c-btn span::before {
+  top: 80%;
+  left: calc(100% + 25px);
+  transform: translateY(-50%);
+  width: 50px;
+  height: 1px;
+  background-color: g.$text-color;
+}
+.c-btn span::after {
+  top: calc(81% - 2px);
+  transform: translateY(calc(-50% - 2px)) rotate(45deg);
+  width: 10px;
+  height: 1px;
+  right: -76px;
+  background: g.$text-color;
+}
+.c-btn:hover {
+  background: #d4eef7;
+  color: #27acd9;
+}

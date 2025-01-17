@@ -1,0 +1,25 @@
+@use '../../global/' as g;
+
+.c-h2-title {
+  letter-spacing: .15em;
+  font-weight: normal;
+  text-align: center;
+}
+.c-h2-title > span {
+  display: inline-flex;
+  padding-bottom: g.fz(20);
+  border-bottom: 2px solid g.$main-color;
+  padding-left: g.fz(3);
+  padding-right: g.fz(3);
+}
+.c-h2-title__main {
+  font-size: g.fz(32);
+}
+.c-h2-title__sub {
+  font-size: g.fz(14);
+  margin-left: g.fz(10);
+  margin-top: g.fz(10);
+}
+.c-h2-title--green {
+  color: g.$main-color;
+}

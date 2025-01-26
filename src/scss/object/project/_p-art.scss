@@ -1,0 +1,32 @@
+@use '../../global/' as g;
+// Art（アート）
+.p-art__inner {
+  padding-bottom: g.fz(115);
+}
+.p-art__contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: g.fz(60);
+}
+.p-art__ashirai {
+  font-size: g.fz(24);
+  letter-spacing: .2em;
+  font-weight: lighter;
+  writing-mode: vertical-rl;
+  color: g.$main-color;
+}
+.p-art__img {
+  max-width: calc((930 / 1120) * 100%);
+}
+.p-art__text-wrap {
+  line-height: 2.2;
+  letter-spacing: .2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: calc((636 / 1120) * 100%);
+  margin-top: g.fz(60);
+}
+.p-art__text + .p-art__text {
+  margin-top: 2em;
+}

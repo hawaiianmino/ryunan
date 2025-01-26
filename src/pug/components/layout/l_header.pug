@@ -1,30 +1,17 @@
-header.header
-  .logo
-    img.logo__img(src=imgPath + "logo.png", alt="ロゴ")
-  nav 
-    ul.nav 
-      li.nav__item 
-        a.nav__link(href="#") ホーム
-      li.nav__item 
-        a.nav__link(href="#") お知らせ
-      li.nav__item 
-        a.nav__link(href="#") ブログ
-      li.nav__item 
-        a.nav__link(href="#") コース・料金
-  .header_right
-    .text_wrap 
-      span 平日08:00〜20:00
-      p.phone_number 0123-456-789
-    .btn_wrap 
-    a.btn.btn--yellow(href="#") 資料請求
-    a.btn.btn--blue(href="#") お問い合わせ 
+header.l-header.p-header
+  .p-header__inner.section-inner
+    h2.p-header__logo
+      img(src=imgPath + 'logo-black.png', alt="Art&Forest Ryu-nan")
+    nav.p-header__nav.p-header-nav
+      ul.p-header-nav__wrapper
+        li.p-header-nav__item
+          a.p-header-nav__link(href="#") concept
+        li.p-header-nav__item
+          a.p-header-nav__link(href="#") information
+        li.p-header-nav__item
+          a.p-header-nav__link(href="#") tenant
+        li.p-header-nav__item
+          a.p-header-nav__link(href="#") 施設概要
+        li.p-header-nav__item
+          a.p-header-nav__link(href="#") お問合せ
 
-    h2.c-h2-title
-      span
-        span.c-h2-title__main <span class="c-h2-title--green">A</span>rt
-        span.c-h2-title__sub アート
-    h2.c-h2-title
-      span
-        span.c-h2-title__main <span class="c-h2-title--green">F</span>orest
-        span.c-h2-title__sub フォレスト
-      

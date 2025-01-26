@@ -1,13 +1,14 @@
 @use "../../global/" as g;
 
+// 「VIEW MORE」ボタン＆共通CSS
 .c-btn {
   display: block;
   text-align: center;
-  padding: g.fz(22);
-  background: #eee;
+  padding: g.fz(26);
+  background: g.$white;
   color: g.$text-color;
   letter-spacing: .15em;
-  transition: 0.5s;
+  // transition: 0.5s;
   text-transform: uppercase;
   border: 1px solid #D9D9D9;
   width: 100%;
@@ -15,9 +16,14 @@
   margin-left: auto;
   margin-right: auto;
   font-size: g.fz(16);
+  @include g.mq(md,max) {
+    padding: g.fz(21);
+    max-width: 328px;
+  }
 }
 .c-btn span {
   position: relative;
+  margin-left: g.fz(-50);
 }
 .c-btn span::before,
 .c-btn span::after {
@@ -25,22 +31,31 @@
   position: absolute;
 }
 .c-btn span::before {
-  top: 80%;
-  left: calc(100% + 25px);
+  top: 66%;
+  left: calc(88% + 25px);
   transform: translateY(-50%);
-  width: 50px;
+  width: 40px;
   height: 1px;
   background-color: g.$text-color;
 }
 .c-btn span::after {
-  top: calc(81% - 2px);
+  top: calc(68% - 2px);
   transform: translateY(calc(-50% - 2px)) rotate(45deg);
   width: 10px;
   height: 1px;
-  right: -76px;
+  right: g.fz(-52);
   background: g.$text-color;
 }
 .c-btn:hover {
-  background: #d4eef7;
-  color: #27acd9;
+  @include g.mq(md) {
+    background: #eee;
+    transition: background .5s ease;
+  }
+}
+// 「お問合せ」ボタン
+.c-btn--contact span::before {
+  left: calc(78% + 25px);
+}
+.c-btn--contact span::after {
+  right: g.fz(-50);
 }

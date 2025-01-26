@@ -1,0 +1,30 @@
+@use '../../global/' as g;
+
+// ヘッダー
+.p-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: g.fz(56);
+}
+.p-header__logo {
+  max-width: 84px;
+}
+.p-header-nav__wrapper {
+  display: flex;
+  align-items: center;
+}
+.p-header-nav__item + .p-header-nav__item {
+  margin-left: clamp(1.875rem, 0.2321rem + 3.4226vw, 3.3125rem);
+}
+.p-header-nav__link {
+  letter-spacing: .21em;
+  text-transform: capitalize;
+  color: g.$text-color;
+}
+.p-place__illust {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: g.fz(72);
+}

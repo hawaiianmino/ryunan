@@ -1,5 +1,35 @@
 @use "../global/" as g;
-
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: g.$font-main;
+  color: g.$text-color;
+}
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.pc {
+  @include g.mq(md,max) {
+    display: none;
+  }
+}
+.sp {
+  @include g.mq(md) {
+    display: none;
+  }
+}
+.text-main-color {
+  color: g.$main-color;
+}
+.text-sub-color {
+color: g.$sub-color;
+}
+.section-inner {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: g.fz(20);
+  padding-right: g.fz(20);
 }

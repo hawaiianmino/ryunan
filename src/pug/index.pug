@@ -7,14 +7,16 @@ append value
   - const location = "top";
 
 block header
+  include components/project/p_fv
   include components/layout/l_header
-  include components/component/c_btn_1
-  include components/component/c_btn_2
 
 block main
   main 
-    include components/project/p_fv
-    include components/project/p_problem
+    include components/project/p_main
+    include components/project/p_place
+    include components/project/p_art
+    include components/project/p_forest
+    include components/project/p_share
 
 block footer
   include components/layout/l_footer

@@ -1,0 +1,37 @@
+@use '../../global/' as g;
+// 人が集い交流を育みここにしかない時間を共有しよう
+.p-share__inner {
+  padding-top: g.fz(128);
+  padding-bottom: g.fz(128);
+}
+.p-share__logo {
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-share__text {
+  font-size: g.fz(24);
+  letter-spacing: .15em;
+  line-height: 2.2;
+  text-align: center;
+  margin-top: g.fz(78);
+}
+.p-share__circle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: g.fz(42);
+}
+.p-share__circle {
+  max-width: 238px;
+  width: 100%;
+}
+.p-share__circle + .p-share__circle {
+  margin-left: g.fz(42);
+}
+.p-share__illust {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: g.fz(20);
+}

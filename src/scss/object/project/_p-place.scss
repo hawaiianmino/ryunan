@@ -1,0 +1,42 @@
+@use '../../global/' as g;
+// Art&Forest Ryu-nan（創造と解放の場所）
+.p-place__inner {
+  margin-top: g.fz(102);
+}
+.p-place__title {
+  display: flex;
+  justify-content: space-between;
+}
+.p-place__main-title {
+  font-size: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
+  font-weight: lighter;
+  line-height: 1.2;
+}
+.p-place__main-title span {
+  display: block;
+  letter-spacing: .15em;
+}
+.p-place__main-title span:first-of-type {
+  text-transform: capitalize;
+}
+.p-place__sub-title {
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  letter-spacing: 1.3em;
+  margin-top: g.fz(77);
+  margin-right: g.fz(12);
+}
+.p-place__contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: g.fz(54);
+}
+.p-place__text {
+  letter-spacing: .2em;
+  line-height: 2.2;
+  font-weight: lighter;
+  flex-shrink: 0;
+  font-size: clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem);
+}
+.p-place__img {
+  max-width: calc((560 / 1120) * 100%);
+}

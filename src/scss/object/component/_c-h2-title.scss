@@ -18,7 +18,9 @@
 .c-h2-title__sub {
   font-size: g.fz(14);
   margin-left: g.fz(7);
-  margin-top: g.fz(10);
+  position: relative;
+  top: g.fz(-6);
+  letter-spacing: .15em;
 }
 .c-h2-title--green > span {
   border-bottom: 2px solid g.$main-color;

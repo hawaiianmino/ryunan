@@ -1,0 +1,25 @@
+@use '../../global/' as g;
+// Facility（施設案内）
+.p-facility__inner {
+  padding-top: g.fz(210);
+  padding-bottom: g.fz(166);
+  background: url(../img/bg-facility.png) no-repeat center / cover;
+}
+.p-facility__title-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  // あとで消すかも
+  margin-left: g.fz(60);
+}
+.p-facility__sub-title {
+  font-size: g.fz(24);
+  letter-spacing: 1.3em;
+  color: g.$white;
+  font-weight: lighter;
+  margin-left: g.fz(66);
+  margin-top: g.fz(10);
+}
+.p-facility__button {
+  margin-top: g.fz(48);
+}

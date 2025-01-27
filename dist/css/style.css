@@ -258,8 +258,10 @@ img {
 
 .c-h2-title__sub {
   font-size: 0.875rem;
+  letter-spacing: 0.15em;
   margin-left: 0.4375rem;
-  margin-top: 0.625rem;
+  position: relative;
+  top: -0.375rem;
 }
 
 .c-h2-title--green > span {
@@ -489,5 +491,136 @@ img {
   margin-right: auto;
   margin-top: 1.25rem;
   max-width: 440px;
+}
+
+.p-info__inner {
+  padding-bottom: 6.25rem;
+}
+
+.p-info-card {
+  flex-shrink: 0;
+  width: 22.9166666667%;
+}
+
+.p-info__card-wrap {
+  margin-top: 3.9375rem;
+  overflow: hidden;
+}
+
+.p-info__card-container {
+  display: flex;
+  gap: 0 1.5rem;
+  justify-content: center;
+}
+
+.p-info-card__contents {
+  font-family: "Noto Sans", serif;
+  margin-top: 1.125rem;
+}
+
+.p-info-card__tag {
+  color: #3F3F3F;
+  display: flex;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.p-info-card__tag span li + li {
+  margin-left: 1em;
+}
+
+.p-info-card__title {
+  color: #3F3F3F;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  margin-top: 1.4375rem;
+}
+
+.p-info__button {
+  margin-top: 4.75rem;
+}
+
+.p-tenant__inner {
+  padding-bottom: 7.5rem;
+  padding-top: 6.375rem;
+}
+
+.p-tenant-card {
+  color: #3F3F3F;
+  display: block;
+  width: 33.3333333333%;
+}
+
+.p-tenant__card-wrap {
+  display: flex;
+  margin-top: 3.5625rem;
+}
+
+.p-tenant-card__title {
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  margin-top: 3.25rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.p-tenant-card__button {
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  margin-left: 4rem;
+  margin-top: 1.125rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.p-tenant-card__button span::after {
+  background: url(../img/arrow.png) no-repeat center/contain;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  margin-left: 0.625rem;
+  width: 40px;
+}
+
+.p-facility__inner {
+  background: url(../img/bg-facility.png) no-repeat center/cover;
+  padding-bottom: 10.375rem;
+  padding-top: 13.125rem;
+}
+
+.p-facility__title-wrap {
+  align-items: start;
+  display: flex;
+  justify-content: center;
+  margin-left: 3.75rem;
+}
+
+.p-facility__sub-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  letter-spacing: 1.3em;
+  margin-left: 4.125rem;
+  margin-top: 0.625rem;
+}
+
+.p-facility__button {
+  margin-top: 3rem;
+}
+
+.p-access__map {
+  margin-top: 3.75rem;
+}
+
+.p-access__map iframe {
+  height: 627px;
+  width: 100%;
+}
+
+.p-access__text {
+  letter-spacing: 0.2em;
+  line-height: 2;
+  margin-top: 3.75rem;
+  text-align: center;
 }
 /*# sourceMappingURL=sourcemaps/style.css.map */

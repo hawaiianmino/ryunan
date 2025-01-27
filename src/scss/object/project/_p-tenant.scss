@@ -1,0 +1,38 @@
+@use '../../global/' as g;
+// Tenant（テナント）
+.p-tenant__inner {
+  padding-top: g.fz(102);
+  padding-bottom: g.fz(120);
+}
+.p-tenant-card {
+  width: calc(100% / 3);
+  color: g.$text-color;
+  display: block;
+}
+.p-tenant__card-wrap {
+  display: flex;
+  margin-top: g.fz(57);
+}
+.p-tenant-card__title {
+  font-size: g.fz(24);
+  text-transform: capitalize;
+  letter-spacing: .15em;
+  margin-top: g.fz(52);
+  text-align: center;
+}
+.p-tenant-card__button {
+  text-transform: uppercase;
+  margin-top: g.fz(18);
+  font-size: g.fz(14);
+  letter-spacing: .15em;
+  text-align: center;
+  margin-left: g.fz(64);
+}
+.p-tenant-card__button span::after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 6px;
+  background: url(../img/arrow.png) no-repeat center / contain;
+  margin-left: g.fz(10);
+}

@@ -33,3 +33,21 @@ color: g.$sub-color;
   padding-left: g.fz(20);
   padding-right: g.fz(20);
 }
+.bg01 {
+  background-image: url(../img/bg01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 89%;
+  background-position: center top;
+}
+.bg02 {
+  background-image: url(../img/bg02.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center 9px;
+}
+.bg03 {
+  background-image: url(../img/bg03.png);
+  background-repeat: no-repeat;
+  background-size: 100% 89%;
+  background-position: center 124px;
+}

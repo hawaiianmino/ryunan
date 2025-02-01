@@ -4,6 +4,11 @@
   padding-top: g.fz(210);
   padding-bottom: g.fz(166);
   background: url(../img/bg-facility.png) no-repeat center / cover;
+  @include g.mq(md,max) {
+    padding-top: g.fz(95);
+    padding-bottom: g.fz(82);
+    background: url(../img/bg-facility-smp.png) no-repeat center / cover;
+  }
 }
 .p-facility__title-wrap {
   display: flex;
@@ -11,6 +16,11 @@
   align-items: start;
   // あとで消すかも
   margin-left: g.fz(60);
+  @include g.mq(md,max) {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
 }
 .p-facility__sub-title {
   font-size: g.fz(24);
@@ -19,7 +29,16 @@
   font-weight: lighter;
   margin-left: g.fz(66);
   margin-top: g.fz(10);
+  @include g.mq(md,max) {
+    font-size: g.fz(16);
+    letter-spacing: .8em;
+    margin-left: initial;
+    margin-top: g.fz(17);
+  }
 }
 .p-facility__button {
   margin-top: g.fz(48);
+  @include g.mq(md,max) {
+    margin-top: g.fz(44);
+  }
 }

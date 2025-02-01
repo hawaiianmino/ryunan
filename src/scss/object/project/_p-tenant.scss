@@ -1,17 +1,42 @@
 @use '../../global/' as g;
 // Tenant（テナント）
 .p-tenant__inner {
-  padding-top: g.fz(102);
-  padding-bottom: g.fz(120);
+  padding-top: g.fz(96);
+  padding-bottom: g.fz(132);
+  @include g.mq(md,max) {
+    padding-left: g.fz(23);
+    padding-right: g.fz(23);
+    padding-bottom: g.fz(66);
+  }
+}
+.p-tenant__card-wrap {
+  display: flex;
+  margin-top: g.fz(57);
+  @include g.mq(md,max) {
+    flex-direction: column;
+    margin-top: g.fz(36);
+  }
 }
 .p-tenant-card {
   width: calc(100% / 3);
   color: g.$text-color;
   display: block;
+  @include g.mq(md,max) {
+    width: 100%;
+  }
 }
-.p-tenant__card-wrap {
-  display: flex;
-  margin-top: g.fz(57);
+.p-tenant-card + .p-tenant-card {
+  @include g.mq(md,max) {
+    margin-top: g.fz(30);
+  }
+}
+.p-tenant-card__contents {
+  @include g.mq(md,max) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: g.fz(12);
+  }
 }
 .p-tenant-card__title {
   font-size: g.fz(24);
@@ -19,6 +44,9 @@
   letter-spacing: .15em;
   margin-top: g.fz(52);
   text-align: center;
+  @include g.mq(md,max) {
+    margin-top: 0;
+  }
 }
 .p-tenant-card__button {
   text-transform: uppercase;
@@ -27,6 +55,10 @@
   letter-spacing: .15em;
   text-align: center;
   margin-left: g.fz(64);
+  @include g.mq(md,max) {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
 .p-tenant-card__button span::after {
   content: '';

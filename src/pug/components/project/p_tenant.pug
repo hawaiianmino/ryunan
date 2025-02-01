@@ -1,4 +1,6 @@
-section.p-tenant
+include ../../mixin/_picture
+
+section.p-tenant#tenant
   .p-tenant__inner
     h2.c-h2-title.c-h2-title--green
         span
@@ -8,21 +10,21 @@ section.p-tenant
     .p-tenant__card-wrap
       a(href="#").p-tenant-card
         .p-tenant-card__img
-          img(src=imgPath + 'img-tenant01.png', alt="テナント1")
+          +webpImg('','img-tenant01','png','テナント1',true)
         .p-tenant-card__contents
           p.p-tenant-card__title futsal
           p.p-tenant-card__button
             span view more
       a(href="#").p-tenant-card
         .p-tenant-card__img
-          img(src=imgPath + 'img-tenant02.png', alt="テナント2")
+          +webpImg('','img-tenant02','png','テナント2',true)
         .p-tenant-card__contents
           p.p-tenant-card__title shop
           p.p-tenant-card__button
             span view more
       a(href="#").p-tenant-card
         .p-tenant-card__img
-          img(src=imgPath + 'img-tenant03.png', alt="テナント3")
+          +webpImg('','img-tenant03','png','テナント3',true)
         .p-tenant-card__contents
           p.p-tenant-card__title cafe
           p.p-tenant-card__button

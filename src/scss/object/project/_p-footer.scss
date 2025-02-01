@@ -1,0 +1,67 @@
+@use '../../global/' as g;
+// footer（フッター）
+.p-footer__inner {
+  background-color: #f8f8f4;
+  padding-top: g.fz(96);
+  padding-bottom: g.fz(84);
+  @include g.mq(md,max) {
+    padding-top: g.fz(64);
+    padding-bottom: g.fz(54);
+  }
+}
+.p-footer__logo {
+  max-width: 143px;
+  margin-left: auto;
+  margin-right: auto;
+  @include g.mq(md,max) {
+    max-width: 84px;
+  }
+}
+.p-footer__text-wrap {
+  margin-top: g.fz(40);
+  @include g.mq(md,max) {
+    margin-top: g.fz(29);
+  }
+}
+.p-footer__text {
+  letter-spacing: .2em;
+  line-height: 2;
+  text-align: center;
+  @include g.mq(md,max) {
+    font-size: g.fz(14);
+    line-height: 1.5;
+    letter-spacing: .15em;
+  }
+}
+.p-footer__text + .p-footer__text {
+  @include g.mq(md,max) {
+    margin-top: g.fz(13);
+  }
+}
+.p-footer__menu {
+  display: flex;
+  justify-content: center;
+  gap: g.fz(42);
+  margin-top: g.fz(63);
+  @include g.mq(md,max) {
+    flex-direction: column;
+    align-items: center;
+    font-size: g.fz(15);
+    margin-top: g.fz(41);
+    gap: g.fz(15);
+  }
+}
+.p-footer__item a {
+  color: g.$text-color;
+}
+.p-footer__copy {
+  letter-spacing: .1em;
+  text-align: center;
+  margin-top: g.fz(66);
+  @include g.mq(md,max) {
+    font-size: g.fz(12);
+    margin-top: g.fz(43);
+    line-height: 1.5;
+    letter-spacing: .15em;
+  }
+}

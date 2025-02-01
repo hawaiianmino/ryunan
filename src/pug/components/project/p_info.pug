@@ -1,13 +1,13 @@
-section.p-info
+section.p-info#information
   .p-info__inner
     h2.c-h2-title.c-h2-title--green
         span
           span.c-h2-title__main
-            <span>I</span>nformation
+            <span>I</span>nformation<br class="sp">
             span.c-h2-title__sub インフォメーション
-    .p-info__card-wrap
-      .p-info__card-container
-        article.p-info-card
+    .p-info__card-wrap#js-swiper-info
+      .p-info__card-container.swiper-wrapper
+        article.p-info-card.swiper-slide
           a(href="#").p-info-card__link
             .p-info-card__img
               img(src=imgPath + 'img-card.png', alt="カード")
@@ -15,8 +15,8 @@ section.p-info
               ul.p-info-card__tag
                 li 2024.12.12
                 li ［news］
-              .p-info-card__title Art &amp; Forest Ryu-nan webサイト公開
-        article.p-info-card
+              h3.p-info-card__title Art&nbsp;&amp;&nbsp;Forest&nbsp;Ryu-nan&nbsp;webサイト公開
+        article.p-info-card.swiper-slide
           a(href="#").p-info-card__link
             .p-info-card__img
               img(src=imgPath + 'img-card.png', alt="カード")
@@ -24,8 +24,8 @@ section.p-info
               ul.p-info-card__tag
                 li 2024.12.12
                 li ［news］
-              .p-info-card__title Art &amp; Forest Ryu-nan webサイト公開
-        article.p-info-card
+              h3.p-info-card__title Art&nbsp;&amp;&nbsp;Forest&nbsp;Ryu-nan&nbsp;webサイト公開
+        article.p-info-card.swiper-slide
           a(href="#").p-info-card__link
             .p-info-card__img
               img(src=imgPath + 'img-card.png', alt="カード")
@@ -33,8 +33,8 @@ section.p-info
               ul.p-info-card__tag
                 li 2024.12.12
                 li ［news］
-              .p-info-card__title Art &amp; Forest Ryu-nan webサイト公開
-        article.p-info-card
+              h3.p-info-card__title Art&nbsp;&amp;&nbsp;Forest&nbsp;Ryu-nan&nbsp;webサイト公開
+        article.p-info-card.swiper-slide
           a(href="#").p-info-card__link
             .p-info-card__img
               img(src=imgPath + 'img-card.png', alt="カード")
@@ -42,8 +42,8 @@ section.p-info
               ul.p-info-card__tag
                 li 2024.12.12
                 li ［news］
-              .p-info-card__title Art &amp; Forest Ryu-nan webサイト公開
-        article.p-info-card
+              h3.p-info-card__title Art&nbsp;&amp;&nbsp;Forest&nbsp;Ryu-nan&nbsp;webサイト公開
+        article.p-info-card.swiper-slide
           a(href="#").p-info-card__link
             .p-info-card__img
               img(src=imgPath + 'img-card.png', alt="カード")
@@ -51,7 +51,18 @@ section.p-info
               ul.p-info-card__tag
                 li 2024.12.12
                 li ［news］
-              .p-info-card__title Art &amp; Forest Ryu-nan webサイト公開
+              h3.p-info-card__title Art&nbsp;&amp;&nbsp;Forest&nbsp;Ryu-nan&nbsp;webサイト公開
+        article.p-info-card.swiper-slide
+          a(href="#").p-info-card__link
+            .p-info-card__img
+              img(src=imgPath + 'img-card.png', alt="カード")
+            .p-info-card__contents
+              ul.p-info-card__tag
+                li 2024.12.12
+                li ［news］
+              h3.p-info-card__title Art&nbsp;&amp;&nbsp;Forest&nbsp;Ryu-nan&nbsp;webサイト公開
+      .swiper-button-next
+      .swiper-button-prev
     .p-info__button
       include ../component/c_btn_1.pug
             

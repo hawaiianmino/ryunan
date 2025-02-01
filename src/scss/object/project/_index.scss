@@ -1,4 +1,5 @@
 @use "p-header";
+@use "p-header-sp";
 @use "p-fv";
 @use "p-main";
 @use "p-place";
@@ -9,3 +10,5 @@
 @use "p-tenant";
 @use "p-facility";
 @use "p-access";
+@use "p-footer";
+@use "p-footer-contact";

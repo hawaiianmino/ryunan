@@ -1,0 +1,39 @@
+@use '../global/' as g;
+
+.swiper-button-prev,
+.swiper-button-next {
+  height: 32px;
+  width: 32px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 32px;
+  margin: auto;
+  width: 32px;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  background-image: url(../img/arrow-left.png);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  background-image: url(../img/arrow-right.png);
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+// 矢印の位置調整
+#js-swiper-info [class^="swiper-button-"]{
+  top: calc(50% - 20px);
+}
+#js-swiper-info .swiper-button-next {
+  right: 11%;
+}
+#js-swiper-info .swiper-button-prev {
+  left: 11%;
+}

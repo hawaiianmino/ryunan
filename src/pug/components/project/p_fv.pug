@@ -1,8 +1,13 @@
+include ../../mixin/_picture
+
 section.p-fv
   .p-fv__inner
-    h1.p-fv__logo
+    h2.p-fv__logo
       img(src=imgPath + 'logo-white.png', alt="ロゴホワイト")
-    .p-fv__container.p-fv-slide
-      .p-fv-slide__inner
-        .p-fv-slide__item
-          img(src=imgPath + 'img-FV-1.png', alt="ファーストビュー1")
+    .p-fv__container.p-fv-slide#js-swiper-fv
+      .p-fv-slide__inner.swiper-wrapper
+        .p-fv-slide__item.swiper-slide
+          +picture('p-fv-slide__img','img-FV-1','png','ファーストビュー１',true)
+        .p-fv-slide__item.swiper-slide
+          +picture('p-fv-slide__img','img-tenant01','png','ファーストビュー１',true)
+      .swiper-pagination

@@ -1,11 +1,26 @@
 @use '../../global/' as g;
 // Art&Forest Ryu-nan（創造と解放の場所）
 .p-place__inner {
-  margin-top: g.fz(102);
+  padding-top: g.fz(102);
+  @include g.mq(md,max) {
+    padding-top: g.fz(30);
+  }
+}
+.p-place__inner.section-inner {
+  @include g.mq(md,max) {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: initial;
+    padding-right: initial;
+  }
 }
 .p-place__title {
   display: flex;
   justify-content: space-between;
+  @include g.mq(md,max) {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .p-place__main-title {
   font-size: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
@@ -15,6 +30,9 @@
 .p-place__main-title span {
   display: block;
   letter-spacing: .15em;
+  @include g.mq(md,max) {
+    letter-spacing: .1em;
+  }
 }
 .p-place__main-title span:first-of-type {
   text-transform: capitalize;
@@ -24,19 +42,46 @@
   letter-spacing: 1.3em;
   margin-top: g.fz(77);
   margin-right: g.fz(12);
+  @include g.mq(md,max) {
+    margin-top: g.fz(23);
+    letter-spacing: .8em;
+  }
 }
 .p-place__contents {
   display: flex;
   justify-content: space-between;
   margin-top: g.fz(54);
+  @include g.mq(md,max) {
+    flex-direction: column-reverse;
+    margin-top: g.fz(36);
+  }
 }
 .p-place__text {
   letter-spacing: .2em;
   line-height: 2.2;
   font-weight: lighter;
-  flex-shrink: 0;
   font-size: clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem);
+  @include g.mq(md,max) {
+    text-align: center;
+    margin-top: g.fz(30);
+    line-height: 2;
+    font-size: g.fz(15);
+    letter-spacing: 0;
+  }
 }
 .p-place__img {
   max-width: calc((560 / 1120) * 100%);
+  @include g.mq(md,max) {
+    max-width: 100%;
+  }
+}
+.p-place__illust {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: g.fz(72);
+  @include g.mq(md,max) {
+    max-width: 230px;
+    margin-top: g.fz(86);
+  }
 }

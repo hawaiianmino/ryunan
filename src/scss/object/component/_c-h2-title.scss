@@ -10,6 +10,10 @@
   padding-bottom: g.fz(17);
   padding-left: g.fz(3);
   padding-right: g.fz(3);
+  @include g.mq(md,max) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .c-h2-title__main {
   font-size: g.fz(32);

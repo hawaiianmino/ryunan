@@ -1,11 +1,21 @@
 
 <section class="p-fv">
   <div class="p-fv__inner">
-    <h1 class="p-fv__logo"><img src="undefinedlogo-white.png" alt="ロゴホワイト"/></h1>
-    <div class="p-fv__container p-fv-slide">
-      <div class="p-fv-slide__inner">
-        <div class="p-fv-slide__item"><img src="undefinedimg-FV-1.png" alt="ファーストビュー1"/></div>
+    <h2 class="p-fv__logo"><img src="undefinedlogo-white.png" alt="ロゴホワイト"/></h2>
+    <div class="p-fv__container p-fv-slide" id="js-swiper-fv">
+      <div class="p-fv-slide__inner swiper-wrapper">
+        <div class="p-fv-slide__item swiper-slide">
+          <picture class="p-fv-slide__img">
+            <source srcset="undefinedimg-FV-1.png" media="(min-width: 768px)"/><img src="undefinedimg-FV-1-smp.png" alt="ファーストビュー１"/>
+          </picture>
+        </div>
+        <div class="p-fv-slide__item swiper-slide">
+          <picture class="p-fv-slide__img">
+            <source srcset="undefinedimg-tenant01.png" media="(min-width: 768px)"/><img src="undefinedimg-tenant01-smp.png" alt="ファーストビュー１"/>
+          </picture>
+        </div>
       </div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>

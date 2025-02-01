@@ -1,0 +1,12 @@
+@use '../../global/' as g;
+// お問合せ（フッター）
+.p-footer-contact__inner {
+  padding-top: g.fz(36);
+  padding-bottom: g.fz(35);
+  background: rgba($color: #221413, $alpha: 0.3);
+  box-shadow: inset 0 0 10px -3px rgba(0, 0, 0, 1);
+  @include g.mq(md,max) {
+    padding-top: g.fz(14);
+    padding-bottom: g.fz(14);
+  }
+}

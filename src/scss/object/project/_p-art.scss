@@ -1,12 +1,28 @@
 @use '../../global/' as g;
 // Art（アート）
 .p-art__inner {
-  padding-bottom: g.fz(115);
+  padding-top: g.fz(172);
+  padding-bottom: g.fz(152);
+  @include g.mq(md,max) {
+    padding-top: g.fz(54);
+    padding-bottom: g.fz(37);
+  }
+}
+.p-art__inner.section-inner {
+  @include g.mq(md,max) {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: initial;
+    padding-right: initial;
+  }
 }
 .p-art__contents {
   display: flex;
   justify-content: space-between;
   margin-top: g.fz(60);
+  @include g.mq(md,max) {
+    margin-top: g.fz(30);
+  }
 }
 .p-art__ashirai {
   font-size: g.fz(24);
@@ -17,6 +33,9 @@
 }
 .p-art__img {
   max-width: calc((930 / 1120) * 100%);
+  @include g.mq(md,max) {
+    max-width: 100%;
+  }
 }
 .p-art__text-wrap {
   line-height: 2.2;
@@ -26,7 +45,22 @@
   width: 100%;
   max-width: calc((636 / 1120) * 100%);
   margin-top: g.fz(60);
+  @include g.mq(md,max) {
+    max-width: 100%;
+    text-align: center;
+    margin-top: g.fz(31);
+  }
+}
+.p-art__text {
+  @include g.mq(md,max) {
+    font-size: g.fz(15);
+    line-height: 2;
+    letter-spacing: 0;
+  }
 }
 .p-art__text + .p-art__text {
   margin-top: 2em;
+  @include g.mq(md,max) {
+    margin-top: g.fz(10);
+  }
 }

@@ -1,0 +1,42 @@
+@use '../../global/' as g;
+// スマホヘッダー
+.p-header-sp__hamburger {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+}
+.p-header-sp-nav__link {
+  letter-spacing: .2em;
+  text-transform: capitalize;
+  color: g.$text-color;
+  padding-top: g.fz(29);
+  padding-bottom: g.fz(29);
+  display: block;
+  text-align: center;
+}
+.p-header-sp {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color: #EEECDA, $alpha: 1);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease-in;
+}
+// ハンバーガーメニューがクリックされた時
+.p-header-sp.--active {
+  opacity: 1;
+  visibility: visible;
+  transition: all .2s ease-in;
+}
+.p-header-sp-nav__wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+// .p-header-sp__hamburger .c-hamburger {
+//   margin-left: auto;
+// }

@@ -1,14 +1,21 @@
 @use '../../global/' as g;
 // 人が集い交流を育みここにしかない時間を共有しよう
 .p-share__inner {
-  padding-top: g.fz(128);
-  padding-bottom: g.fz(128);
+  padding-top: g.fz(117);
+  padding-bottom: g.fz(160);
+  @include g.mq(md,max) {
+    padding-top: g.fz(68);
+    padding-bottom: g.fz(70);
+  }
 }
 .p-share__logo {
   width: 100%;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  @include g.mq(md,max) {
+    max-width: 244px;
+  }
 }
 .p-share__text {
   font-size: g.fz(24);
@@ -16,22 +23,43 @@
   line-height: 2.2;
   text-align: center;
   margin-top: g.fz(78);
+  @include g.mq(md,max) {
+    font-size: g.fz(18);
+    margin-top: g.fz(43);
+    line-height: 2;
+  }
 }
 .p-share__circle-wrap {
   display: flex;
   justify-content: center;
   margin-top: g.fz(42);
+  gap: 0 g.fz(42);
+  @include g.mq(md,max) {
+    flex-wrap: wrap;
+    gap: 0 g.fz(29);
+    margin-top: g.fz(26);
+  }
 }
 .p-share__circle {
   max-width: 238px;
   width: 100%;
-}
-.p-share__circle + .p-share__circle {
-  margin-left: g.fz(42);
+  @include g.mq(md,max) {
+    &:first-child {
+      max-width: 46%;
+    }
+    &:nth-child(2),
+    &:nth-child(3){
+      max-width: calc((100% - 29px) / 2);
+    }
+  }
 }
 .p-share__illust {
   max-width: 440px;
   margin-left: auto;
   margin-right: auto;
   margin-top: g.fz(20);
+  @include g.mq(md,max) {
+    max-width: 230px;
+    margin-top: 0;
+  }
 }

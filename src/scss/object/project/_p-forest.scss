@@ -1,13 +1,28 @@
 @use '../../global/' as g;
 // Forest（フォレスト）
 .p-forest__inner {
-  padding-top: g.fz(115);
+  padding-top: g.fz(87);
+  padding-bottom: g.fz(180);
+  @include g.mq(md,max) {
+    padding-bottom: g.fz(60);
+  }
+}
+.p-forest__inner.section-inner {
+  @include g.mq(md,max) {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: initial;
+    padding-right: initial;
+  }
 }
 .p-forest__contents {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   margin-top: g.fz(60);
+  @include g.mq(md,max) {
+    margin-top: g.fz(30);
+  }
 }
 .p-forest__ashirai {
   font-size: g.fz(24);
@@ -18,6 +33,9 @@
 }
 .p-forest__img {
   max-width: calc((930 / 1120) * 100%);
+  @include g.mq(md,max) {
+    max-width: 100%;
+  }
 }
 .p-forest__text-wrap {
   line-height: 2.2;
@@ -26,8 +44,19 @@
   margin-right: auto;
   width: 100%;
   max-width: calc((672 / 1120) * 100%);
-  margin-top: g.fz(60);
+  margin-top: g.fz(58);
+  @include g.mq(md,max) {
+    max-width: 100%;
+    font-size: g.fz(15);
+    // line-height: 2;
+    text-align: center;
+    letter-spacing: 0;
+    margin-top: g.fz(34);
+  }
 }
 .p-forest__text + .p-forest__text {
-  margin-top: 2em;
+  margin-top: 2.5em;
+  @include g.mq(md,max) {
+    margin-top: g.fz(3);
+  }
 }

@@ -4,20 +4,27 @@
   background-color: #f8f8f4;
   padding-top: g.fz(105);
   padding-bottom: g.fz(97);
+  position: relative;
   @include g.mq(md,max) {
     padding-top: g.fz(48);
     padding-left: g.fz(20);
     padding-right: g.fz(20);
+    padding-bottom: g.fz(43);
   }
 }
 .p-info__card-wrap {
   overflow: hidden;
   margin-top: g.fz(63);
-  position: relative;
+  @include g.mq(md,max) {
+    margin-top: g.fz(26);
+  }
 }
 .p-info-card__contents {
   font-family: g.$font-sub;
   margin-top: g.fz(18);
+  @include g.mq(md,max) {
+    margin-top: g.fz(13);
+  }
 }
 .p-info-card__tag {
   font-size: g.fz(12);
@@ -37,9 +44,15 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-weight: normal;
+  @include g.mq(md,max) {
+    margin-top: g.fz(20);
+  }
 }
 .p-info__button {
   margin-top: g.fz(79);
+  @include g.mq(md,max) {
+    margin-top: g.fz(38);
+  }
 }
 .p-info .c-h2-title__main {
   @include g.mq(md,max) {

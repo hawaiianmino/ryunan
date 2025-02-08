@@ -28,12 +28,21 @@
   width: 100%;
 }
 // 矢印の位置調整
-#js-swiper-info [class^="swiper-button-"]{
-  top: calc(50% - 20px);
+.p-info__inner [class^="swiper-button-"]{
+  top: calc(50% - 35px);
+  @include g.mq(md,max) {
+    top: calc(50% - 30px);
+  }
 }
-#js-swiper-info .swiper-button-next {
+.p-info__inner .swiper-button-next {
   right: 11%;
+  @include g.mq(md,max) {
+    right: 2%;
+  }
 }
-#js-swiper-info .swiper-button-prev {
+.p-info__inner .swiper-button-prev {
   left: 11%;
+  @include g.mq(md,max) {
+    left: 2%;
+  }
 }

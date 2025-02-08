@@ -1,0 +1,22 @@
+extend layouts/_default
+append value
+  - const title = "ブログ詳細 | Art&Forest Ryu-nan";
+  - const description = "トップページのディスクリプション";
+  - const keywords = "キーワード,キーワード2,キーワード3";
+  - const path = ".";
+  - const location = "single";
+
+block header
+  include components/layout/l_header-sp
+  include components/layout/l_header
+
+block main
+  main 
+    include components/project/p_archive-title
+    include components/component/c_breadcrumb
+    include components/project/p_archive
+    include components/component/c_pagenavi
+
+block footer
+  include components/layout/l_footer
+  include components/project/p_footer-contact

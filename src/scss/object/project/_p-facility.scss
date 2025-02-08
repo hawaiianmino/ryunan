@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: start;
   // あとで消すかも
-  margin-left: g.fz(60);
+  margin-left: clamp(1.875rem, -0.2679rem + 4.4643vw, 3.75rem);
   @include g.mq(md,max) {
     flex-direction: column;
     margin-left: 0;
@@ -25,13 +25,15 @@
 .p-facility__sub-title {
   font-size: g.fz(24);
   letter-spacing: 1.3em;
+  text-indent: 1.3em;
   color: g.$white;
   font-weight: lighter;
-  margin-left: g.fz(66);
+  margin-left: g.fz(32);
   margin-top: g.fz(10);
   @include g.mq(md,max) {
     font-size: g.fz(16);
     letter-spacing: .8em;
+    text-indent: .8em;
     margin-left: initial;
     margin-top: g.fz(17);
   }

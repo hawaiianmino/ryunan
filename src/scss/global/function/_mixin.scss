@@ -2,7 +2,7 @@
 
 /**
  * レスポンシブ
- * - sm:  480px〜
+ * - sm:  600px〜
  * - md:  768px〜
  * - lg: 1024px〜
  * - xl: 1200px〜
@@ -14,9 +14,9 @@
  * @include mq(sm, max) { ... }
  */
  $breakpoints: (
-  'sm': 480px,
+  'sm': 600px,
   'md': 768px,
-  'lg': 1024px,
+  'lg': 1025px,
   'xl': 1200px,
   'xxl': 1480px,
 ) !default;

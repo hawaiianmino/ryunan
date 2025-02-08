@@ -11,7 +11,12 @@ img {
   vertical-align: bottom;
 }
 .pc {
-  @include g.mq(md,max) {
+  @include g.mq(md, max) {
+    display: none;
+  }
+}
+.tab {
+  @include g.mq(lg,max) {
     display: none;
   }
 }
@@ -24,7 +29,7 @@ img {
   color: g.$main-color;
 }
 .text-sub-color {
-color: g.$sub-color;
+  color: g.$sub-color;
 }
 .section-inner {
   max-width: 1160px;
@@ -38,16 +43,29 @@ color: g.$sub-color;
   background-repeat: no-repeat;
   background-size: 100% 89%;
   background-position: center top;
+  @include g.mq(md, max) {
+    background-image: url(../img/bg01-smp.png);
+  }
 }
 .bg02 {
   background-image: url(../img/bg02.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center 9px;
+  @include g.mq(md, max) {
+    background-image: url(../img/bg02-smp.png);
+    background-size: 100% 98%;
+  }
 }
 .bg03 {
   background-image: url(../img/bg03.png);
   background-repeat: no-repeat;
   background-size: 100% 89%;
   background-position: center 124px;
+  @include g.mq(md, max) {
+    background-image: url(../img/bg03-smp.png);
+  }
+}
+.bg-white {
+  background: #fff;
 }

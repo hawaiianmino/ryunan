@@ -15,7 +15,12 @@
     max-width: 100px;
   }
 }
-.p-fv-slide__item img {
-  height: 900px;
-  object-fit: cover;
+.p-fv-slide__inner {
+  overflow: hidden;
+}
+.p-fv-slide__item.swiper-slide img {
+  @include g.mq(md) {
+    height: 900px;
+    object-fit: cover;
+  }
 }

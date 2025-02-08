@@ -5,7 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: g.fz(56);
+  padding-top: g.fz(56);
+  padding-bottom: g.fz(56);
 }
 .p-header__logo {
   max-width: 84px;
@@ -21,4 +22,18 @@
   letter-spacing: .21em;
   text-transform: capitalize;
   color: g.$text-color;
+}
+#js-fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}
+#js-fixed-header.--active {
+  transition: all .2s ease-in;
+  visibility: visible;
+  opacity: 1;
 }

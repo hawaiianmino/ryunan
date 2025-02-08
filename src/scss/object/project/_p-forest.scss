@@ -4,6 +4,7 @@
   padding-top: g.fz(87);
   padding-bottom: g.fz(180);
   @include g.mq(md,max) {
+    padding-top: g.fz(71);
     padding-bottom: g.fz(60);
   }
 }
@@ -48,15 +49,15 @@
   @include g.mq(md,max) {
     max-width: 100%;
     font-size: g.fz(15);
-    // line-height: 2;
     text-align: center;
-    letter-spacing: 0;
+    letter-spacing: -0.05em;
+    text-indent: -.0.05em;
     margin-top: g.fz(34);
   }
 }
 .p-forest__text + .p-forest__text {
   margin-top: 2.5em;
   @include g.mq(md,max) {
-    margin-top: g.fz(3);
+    margin-top: g.fz(10);
   }
 }

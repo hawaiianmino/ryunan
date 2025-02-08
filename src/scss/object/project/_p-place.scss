@@ -40,11 +40,14 @@
 .p-place__sub-title {
   font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
   letter-spacing: 1.3em;
+  text-indent: 1.3em;
   margin-top: g.fz(77);
   margin-right: g.fz(12);
   @include g.mq(md,max) {
     margin-top: g.fz(23);
     letter-spacing: .8em;
+    text-indent: .8em;
+    margin-right: 0;
   }
 }
 .p-place__contents {

@@ -37,19 +37,19 @@ $(function () {
    * スライダー機能実装
    **************************/
   //トップページのFVスライド
-  const topFvSlider = new Swiper("#js-swiper-fv", {
-    loop: true,
-    effect: "fade",
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    speed: 2000,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+  // const topFvSlider = new Swiper("#js-swiper-fv", {
+  //   loop: true,
+  //   effect: "fade",
+  //   autoplay: {
+  //     delay: 4000,
+  //     disableOnInteraction: false,
+  //   },
+  //   speed: 2000,
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  //   },
+  // });
 
   // Informationのスライダー
   const infoSlider = new Swiper("#js-swiper-info", {
@@ -73,40 +73,100 @@ $(function () {
    * スムーススクロール
    **************************/
   $('a[href^="#"]').on("click", function (e) {
-    e.preventDefault(); // ページ遷移をキャンセル
+    e.preventDefault();
 
-    var target = $(this.hash); // 移動先要素を取得
-    var speed = 500; // スクロール速度（ミリ秒）
+    var target = $(this.hash);
+    var speed = 500;
+    var windowWidth = $(window).width(); // 画面幅を取得
+
+    if (windowWidth >= 768) {
+      // 768px以上の場合（PC表示とみなす）
+      var headerHeight = $("#js-fixed-header").outerHeight(); // ヘッダーの高さを取得
+      var adjust = headerHeight;
+    } else {
+      var adjust = 0;
+    }
 
     $("html, body").animate(
       {
-        scrollTop: target.offset().top,
+        scrollTop: target.offset().top - adjust, // ヘッダーの高さ分、スクロール位置を調整
       },
       speed,
       "swing"
-    ); // スムーズスクロールを実行
-  });
-
-  // スマホメニューでaタグをクリックしたらメニューを閉じる
-  $(".header__nav-sp a").on("click", function () {
-    $(".js-hamburger").removeClass("active");
-    $(".header__nav-sp").removeClass("active");
-    $("body").css({ overflow: "auto" });
-  });
-
-  gsap.utils.toArray(".fade-in-item").forEach((item) => {
-    gsap.fromTo(
-      item,
-      { opacity: 0 },
-      {
-        opacity: 1,
-        scrollTrigger: {
-          trigger: item,
-          start: "top center",
-          end: "bottom center",
-          markers: true,
-        },
-      }
     );
   });
+
+  // スクロールしたらヘッダーを上から出す
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll > 1200) {
+      $("#js-fixed-header").addClass("--active");
+    } else {
+      $("#js-fixed-header").removeClass("--active");
+    }
+  });
+
+  /***********************
+   * fadeUpアニメーション
+   ***********************/
+
+  // 単独でのfadeupアニメーション
+  gsap.utils.toArray(".js-fadeUpSingle").forEach((target) => {
+    gsap.from(target, {
+      y:20,
+      autoAlpha:0,
+      stagger:0.2,
+      ease:'power2.out',
+      duration:1,
+      scrollTrigger:{
+        trigger:target,
+        start: "top 80%",
+        markers:true,
+      }
+    })
+  });
+
+  let mm = gsap.matchMedia();
+  // PC表示
+  mm.add("(min-width: 768px)", () => {
+    gsap.utils.toArray(".js-fadeUpTrigger").forEach((trigger) => {
+      let target = trigger.querySelectorAll(":scope .js-fadeUpItem");
+      gsap.from(target, {
+        y: 20,
+        autoAlpha: 0,
+        stagger: 0.2,
+        ease: "power2.out",
+        duration: 1,
+        scrollTrigger: {
+          trigger: target,
+          start: "top 80%",
+          markers:true,
+        },
+      });
+    });
+  });
+  // SP表示
+  mm.add("(max-width: 767px)", () => {
+    let targets = document.querySelectorAll(".js-fadeUpItem");
+    targets.forEach((target) => {
+      gsap.from(target, {
+        y: 20,
+        autoAlpha: 0,
+        stagger: 0.2,
+        ease: "power2.out",
+        duration: 1,
+        scrollTrigger: {
+          trigger: target,
+          start: "top 80%",
+        },
+      });
+    });
+  });
+
+
+
+
+
+
 });

@@ -1,18 +1,56 @@
-header.l-header.p-header.pc
-  .p-header__inner.section-inner
-    h1.p-header__logo
-      a(href="#") 
-        img(src=imgPath + 'logo-black.png', alt="Art&Forest Ryu-nan")
-    nav.p-header__nav.p-header-nav
-      ul.p-header-nav__wrapper
-        li.p-header-nav__item
-          a.p-header-nav__link(href="#concept") concept
-        li.p-header-nav__item
-          a.p-header-nav__link(href="#information") information
-        li.p-header-nav__item
-          a.p-header-nav__link(href="#tenant") tenant
-        li.p-header-nav__item
-          a.p-header-nav__link(href="#facility") 施設概要
-        li.p-header-nav__item
-          a.p-header-nav__link(href="#contact") お問合せ
+if location == "top"
+  header.l-header.p-header.bg-white.pc
+    .p-header__inner.section-inner
+      h1.p-header__logo
+        a(href="#") 
+          img(src=imgPath + 'logo-black.png', alt="Art&Forest Ryu-nan")
+      nav.p-header__nav.p-header-nav
+        ul.p-header-nav__wrapper
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#concept") concept
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#information") information
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#tenant") tenant
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#facility") 施設概要
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#contact") お問合せ
+
+  .l-header.p-header#js-fixed-header.bg-white.pc
+    .p-header__inner.section-inner
+      .p-header__logo
+        a(href="#") 
+          img(src=imgPath + 'logo-black.png', alt="Art&Forest Ryu-nan")
+      nav.p-header__nav.p-header-nav
+        ul.p-header-nav__wrapper
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#concept") concept
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#information") information
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#tenant") tenant
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#facility") 施設概要
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#contact") お問合せ
+
+if location == "archive" || "single"
+  header.l-header.p-header.bg-white.pc
+    .p-header__inner.section-inner
+      .p-header__logo
+        a(href="#") 
+          img(src=imgPath + 'logo-black.png', alt="Art&Forest Ryu-nan")
+      nav.p-header__nav.p-header-nav
+        ul.p-header-nav__wrapper
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#concept") concept
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#information") information
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#tenant") tenant
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#facility") 施設概要
+          li.p-header-nav__item
+            a.p-header-nav__link(href="#contact") お問合せ
 

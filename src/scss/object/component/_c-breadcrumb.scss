@@ -1,0 +1,10 @@
+@use "../../global/" as g;
+.c-breadcrumbs__list {
+  display: flex;
+  padding-top: g.fz(20);
+  padding-bottom: g.fz(20);
+  font-size: g.fz(12);
+}
+.c-breadrumbs__link {
+  color: g.$text-color;
+}

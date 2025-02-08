@@ -2,14 +2,14 @@ include ../../mixin/_picture
 
 section.p-place.bg01#concept
   .p-place__inner.section-inner
-    .p-place__title
-      h2.p-place__main-title
+    .p-place__title.js-fadeUpTrigger
+      h2.p-place__main-title.js-fadeUpItem
         span.text-sub-color art&amp;forest
         span.text-main-color Ryu-nan
-      span.p-place__sub-title 創造と解放の場所
-    .p-place__contents
-      p.p-place__text わたしたちは森で繋がっていく。<br>ひとりのとき、ふたりのとき、<br class="sp">みんなでいるとき。<br>森は、命を生み出し、<br>心を、身体を、再生してくれる。<br>集まり、離れ、包まれ、放たれる。<br>そう、わたしたちは森で生きていく。
-      .p-place__img
+      span.p-place__sub-title.js-fadeUpItem 創造と解放の場所
+    .p-place__contents.js-fadeUpTrigger
+      p.p-place__text.js-fadeUpItem わたしたちは森で繋がっていく。<br>ひとりのとき、ふたりのとき、<br class="sp">みんなでいるとき。<br>森は、命を生み出し、<br>心を、身体を、再生してくれる。<br>集まり、離れ、包まれ、放たれる。<br>そう、わたしたちは森で生きていく。
+      .p-place__img.js-fadeUpItem
         +webpImg('','img-art&forest','png','Art&Forest Ryu-nan',true)
-    .p-place__illust
+    .p-place__illust.js-fadeUpSingle
       img(src=imgPath + 'img-ashirai.png', alt="イラスト")

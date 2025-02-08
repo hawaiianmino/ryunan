@@ -1,0 +1,46 @@
+@use '../../global/' as g;
+// アーカイブページ
+.p-archive__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: g.fz(30) g.fz(24);
+  padding-top: g.fz(60);
+  padding-bottom: g.fz(60);
+  @include g.mq(md,max) {
+    gap: g.fz(20) g.fz(15);
+    padding-top: g.fz(30);
+    padding-bottom: g.fz(30);
+  }
+  @include g.mq(sm,max) {
+    gap: g.fz(30);
+  }
+}
+.p-archive-card {
+  width: calc((100% - 48px) / 3);
+  @include g.mq(md,max) {
+    width: calc((100% - 15px) / 2);
+  }
+  @include g.mq(sm,max) {
+    width: 100%;
+  }
+}
+.p-archive-card__link {
+  color: g.$text-color;
+}
+.p-archive-card__date {
+  font-size: g.fz(12);
+  margin-top: g.fz(18);
+}
+.p-archive-card__text {
+  margin-top: g.fz(18);
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.p-archive-card__img img {
+  aspect-ratio: 357 / 260;
+  object-fit: cover;
+}

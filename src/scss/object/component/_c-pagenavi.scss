@@ -1,0 +1,52 @@
+@use "../../global/" as g;
+// WP-PAGENAVIのカスタマイズ
+.wp-pagenavi {
+	margin: g.fz(40) auto;
+	font-size: g.fz(12);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: g.$text-color;
+	@include g.mq(md,max) {
+		margin: g.fz(20) auto;
+	}
+}
+.wp-pagenavi a {
+    color: g.$text-color;
+}
+.wp-pagenavi span.current,
+.wp-pagenavi a.page {
+	margin: 0 10px 0 0;
+	border: solid 1px #eee;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	line-height: 40px;
+	text-align: center;
+	box-sizing: border-box;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	transition: .3s;
+}
+.wp-pagenavi span.current {
+    border: none;
+    background: g.$background-color;
+    color: g.$text-color
+}
+.wp-pagenavi a.page {
+	background: none;
+}
+.wp-pagenavi a.page:hover {
+    background: g.$background-color;
+    color: g.$text-color
+}
+.wp-pagenavi .first,
+.wp-pagenavi .extend {
+    margin-right: g.fz(10);
+}
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+    display: none;
+}

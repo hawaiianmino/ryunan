@@ -1,0 +1,24 @@
+@use "../../global/" as g;
+// アーカイブタイトル
+.p-archive-title__inner {
+  padding-top: g.fz(100);
+  padding-bottom: g.fz(100);
+  background-color: #f8f8f4;
+  @include g.mq(md, max) {
+    padding-top: g.fz(120);
+    padding-bottom: g.fz(120);
+  }
+}
+.p-archive-title .c-h2-title__main {
+  @include g.mq(md, max) {
+    line-height: 0.9;
+  }
+}
+.p-archive-title .c-h2-title > span {
+  @include g.mq(md, max) {
+    justify-content: center;
+    max-width: 330px;
+    padding-bottom: 0.3125rem;
+    width: 100%;
+  }
+}

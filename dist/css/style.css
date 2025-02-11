@@ -1381,6 +1381,101 @@ img {
   }
 }
 
+.p-single__inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.p-single__title {
+  font-size: 1.75rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 767px) {
+  .p-single__thumbnail {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+}
+
+.p-single__thumbnail img {
+  -o-object-fit: cover;
+  aspect-ratio: 1920/1080;
+  object-fit: cover;
+}
+
+.p-single__date {
+  color: #7f7f7f;
+  font-size: 0.875rem;
+  padding-bottom: 0.625rem;
+  padding-top: 0.9375rem;
+  text-align: right;
+}
+
+.p-single__content {
+  line-height: 1.75;
+  margin-top: 1.25rem;
+}
+
+.p-single__content img {
+  -o-object-fit: cover;
+  aspect-ratio: 1920/1080;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  object-fit: cover;
+}
+
+.p-single__content p + p {
+  margin-top: 2rem;
+}
+
+.c-breadcrumbs__list.p-single-breadcrumbs-inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.p-single__content h1,
+.p-single__content h2 {
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  border-left: 5px solid #3F3F3F;
+  font-size: 1.875rem;
+  margin-bottom: 2rem;
+  margin-top: 1.75rem;
+  padding: 0.375rem 0.75rem;
+}
+
+.p-single__content h3 {
+  border-bottom: 1px dashed #ddd;
+  border-left: 5px solid #3F3F3F;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 0.375rem 0.75rem;
+}
+
+.p-single__content h4 {
+  border-left: 5px solid #3F3F3F;
+  font-size: 1.375rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 0.375rem 0.75rem;
+}
+
+.p-single__content h5 {
+  border-left: 5px solid #3F3F3F;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 0.375rem 0.75rem;
+}
+
 /**
  * Swiper 11.2.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions

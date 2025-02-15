@@ -1,10 +1,17 @@
 @use '../../global/' as g;
 // スマホヘッダー
-.p-header-sp__hamburger {
-  position: fixed;
-  top: 10px;
-  right: 10px;
+.p-header-sp-menu__logo {
+  max-width: 60px;
+}
+.p-header-sp-menu__hamburger {
   z-index: 100;
+}
+.p-header-sp-menu__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: g.fz(24);
+  padding-bottom: g.fz(24);
 }
 .p-header-sp-nav__link {
   letter-spacing: .2em;
@@ -16,7 +23,10 @@
   text-align: center;
 }
 .p-header-sp {
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 100vh;
   width: 100%;
   background-color: rgba($color: #EEECDA, $alpha: 1);

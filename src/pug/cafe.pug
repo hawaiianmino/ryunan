@@ -1,0 +1,19 @@
+extend layouts/_default
+append value
+  - const title = "カフェ | Art&Forest Ryu-nan";
+  - const description = "トップページのディスクリプション";
+  - const keywords = "キーワード,キーワード2,キーワード3";
+  - const path = ".";
+  - const location = "cafe";
+
+block header
+  include components/layout/l_header-sp
+  include components/layout/l_header
+
+block main
+  main 
+    include components/project/p_cafe
+
+block footer
+  include components/layout/l_footer
+  include components/project/p_footer-contact

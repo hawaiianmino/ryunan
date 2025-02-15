@@ -1,0 +1,39 @@
+include ../../mixin/_picture
+.p-cafe
+  .p-cafe__inner
+    .p-cafe__img.section-inner
+      +webpImg('','img-cafe-fv','png','カフェの画像',true)
+    h2.c-h2-title.c-h2-title--green.p-cafe__title.section-inner
+      span
+        span.c-h2-title__main
+          <span>C</span>afe
+          span.c-h2-title__sub カフェ
+    section.p-cafe-detail
+      .p-cafe-text-box.section-inner
+        .p-cafe-text-box__title CAFE de RYUNAN
+        .p-cafe-text-box__text カフェに関する紹介文章が入ります。このテキストは字間や行間を確認するためのダミーテキストになります。カフェに関する紹介文章が入ります。このテキストは字間や行間を確認するためのダミーテキストになります。カフェに関する紹介文章が入ります。このテキストは字間や行間を確認するためのダミーテキストになります。
+      .p-cafe-info.section-inner
+        .p-cafe-info__item
+          span.p-cafe-info__box TEL
+          .p-cafe-info__text 054-200-4740
+        .p-cafe-info__item
+          span.p-cafe-info__box 住所
+          .p-cafe-info__text 静岡市葵区竜南1丁目25−192−1
+        .p-cafe-info__item
+          span.p-cafe-info__box 営業時間
+          .p-cafe-info__text-wrap
+            .p-cafe-info__text 平日 10:00 〜 17:00<br>土日祝 10:00 〜 18:00
+        .p-cafe-info__item
+          span.p-cafe-info__box サービス
+          .p-cafe-info__text-wrap
+            .p-cafe-info__text wi-fi 完備<br>各種キャッシュレス可
+        .p-cafe-info__item
+          span.p-cafe-info__box 定休日
+          .p-cafe-info__text 毎週火曜日
+      .p-cafe-card.section-inner
+        .p-cafe-card__img
+          +webpImg('','img-cafe01','png','カフェの画像',true)
+        .p-cafe-card__img
+          +webpImg('','img-cafe02','png','カフェの画像',true)
+        .p-cafe-card__img
+          +webpImg('','img-cafe03','png','カフェの画像',true)

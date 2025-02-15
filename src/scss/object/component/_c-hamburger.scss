@@ -3,7 +3,6 @@
   /*ボタン内側の基点となるためrelativeを指定。
 追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
   position: relative;
-  background: #57a2c7;
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -17,7 +16,7 @@
   left: 10px;
   height: 3px;
   border-radius: 2px;
-  background: #fff;
+  background: g.$text-color;
   width: 60%;
 }
 

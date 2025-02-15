@@ -27,7 +27,7 @@
     <link rel="icon" type="image/png" href="icon-192x192.png">
     <!-- Google font--><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- style.css-->
     <link rel="stylesheet" href="./css/style.css">
     <script>
@@ -42,10 +42,15 @@
     <noscript>
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-A4B4CDE" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
-    <div class="p-header-sp__hamburger sp">
-      <div class="c-hamburger js-hamburger"><span></span><span></span><span></span></div>
-    </div>
-    <header class="l-header-sp p-header-sp sp">
+    <header class="p-header-sp-menu sp">
+      <div class="p-header-sp-menu__inner section-inner">
+        <div class="p-header-sp-menu__logo"><a href="#"><img src="./img/logo-black.png" alt="ロゴ"></a></div>
+        <div class="p-header-sp-menu__hamburger">
+          <div class="c-hamburger js-hamburger"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </header>
+    <div class="l-header-sp p-header-sp sp">
       <div class="p-header-sp__inner">
         <nav class="p-header-sp-nav">
           <ul class="p-header-sp-nav__wrapper">
@@ -57,7 +62,7 @@
           </ul>
         </nav>
       </div>
-    </header>
+    </div>
     <section class="p-fv">
       <div class="p-fv__inner">
         <h2 class="p-fv__logo"><img src="./img/logo-white.png" alt="ロゴホワイト"></h2>

@@ -1,0 +1,18 @@
+extend layouts/_default
+append value
+  - const title = "竜南フットサルパーク";
+  - const description = "竜南フットサルパークの特設ページです。";
+  - const keywords = "キーワード,キーワード2,キーワード3";
+  - const path = ".";
+  - const location = "ryunan";
+
+block header
+  include components/layout/l_header-sp
+  include components/layout/l_header
+
+block main
+  main 
+    include components/project/p_ryunan
+
+block footer
+  include components/project/p_ryunan-footer

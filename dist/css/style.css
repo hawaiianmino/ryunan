@@ -334,7 +334,6 @@ img {
 }
 
 .c-hamburger {
-  background: #57a2c7;
   border-radius: 5px;
   cursor: pointer;
   height: 50px;
@@ -346,7 +345,7 @@ img {
 
 /*ボタン内側*/
 .c-hamburger span {
-  background: #fff;
+  background: #3F3F3F;
   border-radius: 2px;
   display: inline-block;
   height: 3px;
@@ -501,11 +500,20 @@ img {
   visibility: visible;
 }
 
-.p-header-sp__hamburger {
-  position: fixed;
-  right: 10px;
-  top: 10px;
+.p-header-sp-menu__logo {
+  max-width: 60px;
+}
+
+.p-header-sp-menu__hamburger {
   z-index: 100;
+}
+
+.p-header-sp-menu__inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .p-header-sp-nav__link {
@@ -521,8 +529,11 @@ img {
 .p-header-sp {
   background-color: #eeecda;
   height: 100vh;
+  left: 0;
   opacity: 0;
-  position: fixed;
+  position: absolute;
+  right: 0;
+  top: 0;
   transition: all 0.2s ease-in;
   visibility: hidden;
   width: 100%;
@@ -952,7 +963,7 @@ img {
 }
 
 .p-info-card__contents {
-  font-family: "Noto Sans", serif;
+  font-family: "Noto Sans JP", serif;
   margin-top: 1.125rem;
 }
 @media screen and (max-width: 767px) {
@@ -1474,6 +1485,276 @@ img {
   margin-bottom: 2rem;
   margin-top: 2rem;
   padding: 0.375rem 0.75rem;
+}
+
+.p-cafe__title {
+  padding-bottom: 5.5625rem;
+  padding-top: 4.5rem;
+}
+@media screen and (max-width: 767px) {
+  .p-cafe__title {
+    background-color: #F8F8F4;
+    padding-bottom: 1.625rem;
+    padding-top: 2.625rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-cafe__title {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .p-cafe__img.section-inner {
+    padding-left: initial;
+    padding-right: initial;
+  }
+}
+
+.p-cafe-detail {
+  background-color: #F8F8F4;
+  padding-bottom: 10.375rem;
+  padding-top: 7.0625rem;
+}
+@media screen and (max-width: 767px) {
+  .p-cafe-detail {
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem;
+  }
+}
+
+.p-cafe-text-box {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .p-cafe-text-box {
+    flex-direction: column;
+  }
+}
+
+.p-cafe-text-box__title {
+  font-size: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
+  letter-spacing: 0.15em;
+  margin-top: 0.75rem;
+  width: 33.3333333333%;
+}
+@media screen and (max-width: 767px) {
+  .p-cafe-text-box__title {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.p-cafe-text-box__text {
+  letter-spacing: 0.2em;
+  line-height: 2.2;
+  width: 64.7368421053%;
+}
+@media screen and (max-width: 767px) {
+  .p-cafe-text-box__text {
+    font-size: 0.9375rem;
+    margin-top: 2.625rem;
+    width: 100%;
+  }
+}
+
+.p-cafe-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem 0;
+  margin-top: 5rem;
+}
+@media screen and (max-width: 767px) {
+  .p-cafe-info {
+    gap: 2.4375rem;
+    margin-top: 2.125rem;
+  }
+}
+
+.p-cafe-info__item {
+  width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .p-cafe-info__item {
+    width: 100%;
+  }
+}
+
+.p-cafe-info__box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: inline-block;
+  letter-spacing: 2.4px;
+  padding: 0.5rem 1.125rem;
+}
+
+.p-cafe-info__text {
+  font-size: 1.125rem;
+  letter-spacing: 2.7px;
+  line-height: 2;
+  margin-top: 1.5625rem;
+}
+@media screen and (max-width: 767px) {
+  .p-cafe-info__text {
+    font-size: 1rem;
+    margin-top: 0.6875rem;
+    margin-top: 0.3125rem;
+  }
+}
+
+.p-cafe-card {
+  display: flex;
+  gap: 0.125rem;
+  margin-top: 12.0625rem;
+}
+@media screen and (max-width: 767px) {
+  .p-cafe-card {
+    flex-direction: column;
+    margin-top: 4.0625rem;
+  }
+}
+
+.p-ryunan {
+  font-family: "Noto Sans JP", serif;
+}
+
+.p-ryunan-fv {
+  position: relative;
+}
+
+.p-ryunan-fv__text {
+  color: #fff;
+  left: 50%;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.p-ryunan-fv__title {
+  font-size: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
+  text-transform: uppercase;
+}
+
+.p-ryunan-fv_sub-title {
+  font-family: "Noto Sans JP", serif;
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  font-weight: normal;
+}
+
+.p-ryunan-card__inner {
+  padding-bottom: 7.5rem;
+  padding-top: 7.5rem;
+}
+
+.p-ryunan-card__wrap {
+  display: flex;
+  gap: 2.5rem;
+}
+@media screen and (max-width: 767px) {
+  .p-ryunan-card__wrap {
+    flex-direction: column;
+  }
+}
+
+.p-ryunan-card__item {
+  color: #fff;
+  width: calc((100% - 40px) / 2);
+}
+@media screen and (max-width: 767px) {
+  .p-ryunan-card__item {
+    width: 100%;
+  }
+}
+
+.p-ryunan-card__img {
+  position: relative;
+}
+
+.p-ryunan-card__img span {
+  bottom: 1.3125rem;
+  left: 1.5rem;
+  letter-spacing: 0.2em;
+  position: absolute;
+}
+
+.p-ryunan-card__img span::after {
+  background: url(../img/img-ryunan-card-arrow.png) no-repeat center/contain;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  margin-left: 0.625rem;
+  width: 47px;
+}
+
+.p-ryunan-card__img img {
+  -o-object-fit: cover;
+  aspect-ratio: 540/340;
+  object-fit: cover;
+}
+
+.p-ryunan-menu__title {
+  color: #fff;
+  font-size: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem);
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.p-ryunan-menu__title::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  width: 50px;
+}
+
+.p-ryunan-menu__inner {
+  background: linear-gradient(0deg, rgb(9, 30, 58) 0%, rgb(47, 128, 237) 48%, rgb(45, 158, 224) 100%);
+  padding-bottom: 12.5rem;
+  padding-top: 12.5rem;
+}
+
+.p-ryunan-menu__background {
+  color: #fff;
+  display: block;
+  margin-top: 2.75rem;
+  position: relative;
+}
+
+.p-ryunan-menu__contents {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-ryunan-menu__img {
+  height: 82px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 82px;
+}
+
+.p-ryunan-menu__fv img {
+  -o-object-fit: cover;
+  aspect-ratio: 1120/245;
+  object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .p-ryunan-menu__fv img {
+    aspect-ratio: 330/195;
+  }
+}
+
+.p-ryunan-menu__reserve {
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
 }
 
 /**

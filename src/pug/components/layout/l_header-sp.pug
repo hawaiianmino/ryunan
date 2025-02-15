@@ -1,6 +1,11 @@
-.p-header-sp__hamburger.sp
-  include ../component/c_hamburger
-header.l-header-sp.p-header-sp.sp
+header.p-header-sp-menu.sp
+  .p-header-sp-menu__inner.section-inner
+    .p-header-sp-menu__logo
+      a(href="#")
+        img(src=imgPath + "logo-black.png", alt="ロゴ")
+    .p-header-sp-menu__hamburger
+      include ../component/c_hamburger
+.l-header-sp.p-header-sp.sp
   .p-header-sp__inner
     nav.p-header-sp-nav
       ul.p-header-sp-nav__wrapper

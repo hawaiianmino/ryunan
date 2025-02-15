@@ -1,0 +1,100 @@
+@use '../../global/' as g;
+
+// カフェの詳細ページ
+.p-cafe__title {
+  padding-top: g.fz(72);
+  padding-bottom: g.fz(89);
+  @include g.mq(md,max) {
+    background-color: g.$background-color;
+    padding-top: g.fz(42);
+    padding-bottom: g.fz(26);
+  }
+  @include g.mq(md) {
+    text-align: left;
+  }
+}
+.p-cafe__img.section-inner {
+  @include g.mq(md,max) {
+    padding-left: initial;
+    padding-right: initial;
+  }
+}
+.p-cafe-detail {
+  background-color: g.$background-color;
+  padding-top: g.fz(113);
+  padding-bottom: g.fz(166);
+  @include g.mq(md,max) {
+    padding-bottom: g.fz(20);
+    padding-top: g.fz(20);
+  }
+}
+.p-cafe-text-box {
+  display: flex;
+  justify-content: space-between;
+  @include g.mq(md,max) {
+    flex-direction: column;
+  }
+}
+.p-cafe-text-box__title {
+  font-size: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
+  letter-spacing: 0.15em;
+  width: calc((380 / 1140) * 100%);
+  margin-top: g.fz(12);
+  @include g.mq(md,max) {
+    width: 100%;
+    text-align: center;
+  }
+}
+.p-cafe-text-box__text {
+  line-height: 2.2;
+  letter-spacing: 0.2em;
+  width: calc((738 / 1140) * 100%);
+  @include g.mq(md,max) {
+    width: 100%;
+    margin-top: g.fz(42);
+    font-size: g.fz(15);
+  }
+}
+.p-cafe-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: g.fz(64) 0;
+  margin-top: g.fz(80);
+  @include g.mq(md,max) {
+    gap: g.fz(39);
+    margin-top: g.fz(34);
+  }
+}
+.p-cafe-info__item {
+  width: 50%;
+  @include g.mq(md,max) {
+    width: 100%;
+  }
+}
+.p-cafe-info__box {
+  letter-spacing: 2.4px;
+  display: inline-block;
+  padding: g.fz(8) g.fz(18);
+  background-color: g.$white;
+  border: 1px solid #ddd;
+}
+.p-cafe-info__text {
+  font-size: g.fz(18);
+  letter-spacing: 2.7px;
+  line-height: 2;
+  margin-top: g.fz(25);
+  @include g.mq(md,max) {
+    margin-top: g.fz(11);
+    font-size: g.fz(16);
+    margin-top: g.fz(5);
+  }
+}
+.p-cafe-card {
+  display: flex;
+  gap: g.fz(2);
+  margin-top: g.fz(193);
+  @include g.mq(md,max) {
+    flex-direction: column;
+    margin-top: g.fz(65);
+  }
+}

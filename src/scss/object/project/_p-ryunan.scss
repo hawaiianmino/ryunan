@@ -1,0 +1,119 @@
+@use '../../global/' as g;
+
+// 竜南フットサル特設ページ
+.p-ryunan {
+  font-family: g.$font-sub;
+}
+.p-ryunan-fv {
+  position: relative;
+}
+.p-ryunan-fv__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: g.$white;
+  line-height: 1.2;
+  letter-spacing: .15em;
+}
+.p-ryunan-fv__title {
+  font-size: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
+  text-transform: uppercase;
+}
+.p-ryunan-fv_sub-title {
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  font-family: g.$font-sub;
+  font-weight: normal;
+}
+// カード
+.p-ryunan-card__inner {
+  padding-top: g.fz(120);
+  padding-bottom: g.fz(120);
+}
+.p-ryunan-card__wrap {
+  display: flex;
+  gap: g.fz(40);
+  @include g.mq(md,max) {
+    flex-direction: column;
+  }
+}
+.p-ryunan-card__item {
+  width: calc((100% - 40px) / 2);
+  color: g.$white;
+  @include g.mq(md,max) {
+    width: 100%;
+  }
+}
+.p-ryunan-card__img {
+  position: relative;
+}
+.p-ryunan-card__img span {
+  position: absolute;
+  bottom: g.fz(21);
+  left: g.fz(24);
+  letter-spacing: .2em;
+}
+.p-ryunan-card__img span::after {
+  content: '';
+  display: inline-block;
+  width: 47px;
+  height: 5px;
+  background: url(../img/img-ryunan-card-arrow.png) no-repeat center / contain;
+  margin-left: g.fz(10);
+}
+.p-ryunan-card__img img{
+  aspect-ratio: 540 / 340;
+  object-fit: cover;
+}
+// コートレンタル、個人参加
+.p-ryunan-menu__title {
+  font-size: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem);
+  letter-spacing: .2em;
+  text-align: center;
+  color: g.$white;
+}
+.p-ryunan-menu__title::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: g.$white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: g.fz(16);
+}
+.p-ryunan-menu__inner {
+  background: linear-gradient(0deg, rgba(9,30,58,1) 0%, rgba(47,128,237,1) 48%, rgba(45,158,224,1) 100%);
+  padding-top: g.fz(200);
+  padding-bottom: g.fz(200);
+}
+.p-ryunan-menu__background {
+  margin-top: g.fz(44);
+  position: relative;
+  display: block;
+  color: g.$white;
+}
+.p-ryunan-menu__contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.p-ryunan-menu__img {
+  width: 82px;
+  height: 82px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-ryunan-menu__fv img {
+  aspect-ratio: 1120 / 245;
+  object-fit: cover;
+  @include g.mq(md,max) {
+    aspect-ratio: 330 / 195;
+  }
+}
+.p-ryunan-menu__reserve {
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+}

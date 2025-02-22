@@ -69,3 +69,8 @@ img {
 .bg-white {
   background: #fff;
 }
+// aタグホバー時の基本動作
+a:hover {
+  opacity: .6;
+  transition: opacity .2s ease-in;
+}

@@ -36,20 +36,20 @@ $(function () {
   /*************************
    * スライダー機能実装
    **************************/
-  //トップページのFVスライド
-  // const topFvSlider = new Swiper("#js-swiper-fv", {
-  //   loop: true,
-  //   effect: "fade",
-  //   autoplay: {
-  //     delay: 4000,
-  //     disableOnInteraction: false,
-  //   },
-  //   speed: 2000,
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //     clickable: true,
-  //   },
-  // });
+  // トップページのFVスライド
+  const topFvSlider = new Swiper("#js-swiper-fv", {
+    loop: true,
+    effect: "fade",
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    speed: 2000,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
   // Informationのスライダー
   const infoSlider = new Swiper("#js-swiper-info", {
@@ -116,9 +116,9 @@ $(function () {
     gsap.from(target, {
       y:20,
       autoAlpha:0,
-      stagger:0.2,
+      stagger:0.5,
       ease:'power2.out',
-      duration:1,
+      duration:1.5,
       scrollTrigger:{
         trigger:target,
         start: "top 80%",
@@ -135,12 +135,12 @@ $(function () {
       gsap.from(target, {
         y: 20,
         autoAlpha: 0,
-        stagger: 0.2,
+        stagger: 0.5,
         ease: "power2.out",
         duration: 1,
         scrollTrigger: {
           trigger: target,
-          start: "top 80%",
+          start: "top 75%",
           markers:true,
         },
       });

@@ -6,37 +6,51 @@
 }
 .p-ryunan-fv {
   position: relative;
+  @include g.mq(md,max) {
+    margin-top: g.fz(102);
+  }
 }
 .p-ryunan-fv__text {
   position: absolute;
-  top: 50%;
+  top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
   color: g.$white;
-  line-height: 1.2;
-  letter-spacing: .15em;
+  line-height: 1.3;
+  @include g.mq(md,max) {
+    top: 47%;
+    line-height: 2;
+  }
 }
 .p-ryunan-fv__title {
-  font-size: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
+  font-size: clamp(1.5rem, 0.6197rem + 3.7559vw, 4rem);
   text-transform: uppercase;
+  font-family: g.$font-third;
+  letter-spacing: .1em;
 }
 .p-ryunan-fv_sub-title {
   font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
   font-family: g.$font-sub;
   font-weight: normal;
+  letter-spacing: .15em;
 }
 // カード
 .p-ryunan-card__inner {
-  padding-top: g.fz(120);
+  padding-top: g.fz(125);
   padding-bottom: g.fz(120);
+  @include g.mq(md,max) {
+    padding-top: g.fz(46);
+    padding-bottom: g.fz(44);
+  }
 }
 .p-ryunan-card__wrap {
   display: flex;
   gap: g.fz(40);
   @include g.mq(md,max) {
     flex-direction: column;
+    gap: g.fz(38);
   }
 }
 .p-ryunan-card__item {
@@ -50,10 +64,15 @@
   position: relative;
 }
 .p-ryunan-card__img span {
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
   position: absolute;
-  bottom: g.fz(21);
+  bottom: g.fz(24);
   left: g.fz(24);
   letter-spacing: .2em;
+  @include g.mq(md,max) {
+    left: g.fz(16);
+    bottom: g.fz(18);
+  }
 }
 .p-ryunan-card__img span::after {
   content: '';
@@ -64,8 +83,11 @@
   margin-left: g.fz(10);
 }
 .p-ryunan-card__img img{
-  aspect-ratio: 540 / 340;
+  aspect-ratio: 540 / 330;
   object-fit: cover;
+  @include g.mq(md,max) {
+    aspect-ratio: 330 / 201;
+  }
 }
 // コートレンタル、個人参加
 .p-ryunan-menu__title {
@@ -86,26 +108,40 @@
 }
 .p-ryunan-menu__inner {
   background: linear-gradient(0deg, rgba(9,30,58,1) 0%, rgba(47,128,237,1) 48%, rgba(45,158,224,1) 100%);
-  padding-top: g.fz(200);
-  padding-bottom: g.fz(200);
+  padding-top: g.fz(66);
+  padding-bottom: g.fz(102);
+  @include g.mq(md,max) {
+    padding-top: g.fz(39);
+    padding-bottom: g.fz(63);
+  }
 }
 .p-ryunan-menu__background {
   margin-top: g.fz(44);
   position: relative;
   display: block;
   color: g.$white;
+  @include g.mq(md,max) {
+    margin-top: g.fz(15);
+  }
 }
 .p-ryunan-menu__contents {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%,-50%);
+  @include g.mq(md,max) {
+    top: 48%;
+  }
 }
 .p-ryunan-menu__img {
   width: 82px;
   height: 82px;
   margin-left: auto;
   margin-right: auto;
+  @include g.mq(md,max) {
+    width: 69px;
+    height: 69px;
+  }
 }
 .p-ryunan-menu__fv img {
   aspect-ratio: 1120 / 245;
@@ -116,4 +152,89 @@
 }
 .p-ryunan-menu__reserve {
   font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+  margin-top: g.fz(15);
+  letter-spacing: .2em;
+  position: relative;
+  @include g.mq(md,max) {
+    margin-top: g.fz(3);
+  }
+}
+.p-ryunan-menu__reserve::after {
+  content: "";
+  width: 46px;
+  height: 5px;
+  display: inline-block;
+  background: url(../img/img-ryunan-resereve-arrow.png) no-repeat center / contain;
+  position: absolute;
+  bottom: 0;
+  right: -50px
+}
+.p-ryunan-menu__lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: g.fz(36);
+  max-width: 713px;
+  margin-left: auto;
+  margin-right: auto;
+  @include g.mq(md,max) {
+    margin-top: g.fz(15);
+  }
+}
+.p-ryunan-menu__item {
+  font-size: clamp(1rem, 0.868rem + 0.5634vw, 1.375rem);
+  letter-spacing: .2em;
+  @include g.mq(md,max) {
+    letter-spacing: 0;
+  }
+}
+.p-ryunan-menu__item a {
+  color: g.$white;
+  display: flex;
+  align-items: center;
+}
+.p-ryunan-menu__item a::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url(../img/img-reserve-arrow.png) no-repeat center / contain;
+  margin-left: g.fz(5);
+  margin-top: g.fz(10);
+}
+// アクセス
+.p-ryunan-access__inner {
+  padding-top: g.fz(115);
+  padding-bottom: g.fz(193);
+  background-color: rgba($color: #2F80ED, $alpha: 0.1);
+  @include g.mq(md,max) {
+    padding-top: g.fz(57);
+    padding-bottom: g.fz(42);
+  }
+}
+.p-ryunan-access__title {
+  font-size: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem);
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  text-align: center;
+}
+.p-ryunan-access__title::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: g.$text-color;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: g.fz(16);
+}
+.p-ryunan-access__map {
+  margin-top: g.fz(42);
+}
+.p-ryunan-access__map iframe {
+  width: 100%;
+  height: 522px;
+  @include g.mq(md,max) {
+    height: 330px;
+  }
 }

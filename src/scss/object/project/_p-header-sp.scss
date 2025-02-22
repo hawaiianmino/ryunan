@@ -1,5 +1,20 @@
 @use '../../global/' as g;
 // スマホヘッダー
+.p-header-sp-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  // background: g.$white;
+}
+.p-header-sp-menu.--clear {
+  background: none;
+}
+.p-header-sp-menu.--clear .p-header-sp-menu__logo {
+  opacity: 0;
+  visibility: hidden;
+}
 .p-header-sp-menu__logo {
   max-width: 60px;
 }
@@ -10,8 +25,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: g.fz(24);
-  padding-bottom: g.fz(24);
+  padding-top: g.fz(26);
+  padding-bottom: g.fz(26);
 }
 .p-header-sp-nav__link {
   letter-spacing: .2em;
@@ -23,7 +38,7 @@
   text-align: center;
 }
 .p-header-sp {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -47,6 +62,3 @@
   transform: translateY(-50%);
   width: 100%;
 }
-// .p-header-sp__hamburger .c-hamburger {
-//   margin-left: auto;
-// }

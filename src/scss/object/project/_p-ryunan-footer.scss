@@ -1,0 +1,46 @@
+@use '../../global/' as g;
+
+// 竜南フットサル特設ページのfooter
+.p-ryunan-footer {
+  font-family: g.$font-sub;
+  color: g.$white;
+  background-color: #014578;
+}
+.p-ryunan-footer__inner {
+  padding-top: g.fz(68);
+  padding-bottom: g.fz(96);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  @include g.mq(md,max) {
+    flex-direction: column;
+    align-items: initial;
+    padding-top: g.fz(41);
+    padding-bottom: g.fz(52);
+  }
+}
+.p-ryunan-footer__title {
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem);
+  font-family: g.$font-third;
+}
+.p-ryunan-footer__title > span {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+  font-weight: 400;
+  font-family: g.$font-sub;
+}
+.p-ryunan-footer__contents {
+  margin-top: g.fz(27);
+  line-height: 2;
+  @include g.mq(md,max) {
+    font-size: g.fz(14);
+    margin-top: g.fz(23);
+  }
+}
+.p-ryunan-footer__right {
+  margin-top: g.fz(35);
+  @include g.mq(md,max) {
+    font-size: g.fz(12);
+  }
+}

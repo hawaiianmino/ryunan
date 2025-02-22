@@ -1,21 +1,44 @@
-header.p-header-sp-menu.sp
-  .p-header-sp-menu__inner.section-inner
-    .p-header-sp-menu__logo
-      a(href="#")
-        img(src=imgPath + "logo-black.png", alt="ロゴ")
-    .p-header-sp-menu__hamburger
-      include ../component/c_hamburger
-.l-header-sp.p-header-sp.sp
-  .p-header-sp__inner
-    nav.p-header-sp-nav
-      ul.p-header-sp-nav__wrapper
-        li.p-header-sp-nav__item
-          a(href="#concept").p-header-sp-nav__link concept
-        li.p-header-sp-nav__item
-          a(href="#information").p-header-sp-nav__link information
-        li.p-header-sp-nav__item
-          a(href="#tenant").p-header-sp-nav__link tenant
-        li.p-header-sp-nav__item
-          a(href="#facility").p-header-sp-nav__link 施設概要
-        li.p-header-sp-nav__item
-          a(href="#contact").p-header-sp-nav__link お問合せ
+if location =="top"
+  header.p-header-sp-menu.sp.--clear
+    .p-header-sp-menu__inner.section-inner
+      .p-header-sp-menu__logo
+        a(href="#")
+          img(src=imgPath + "logo-black.png", alt="ロゴ")
+      .p-header-sp-menu__hamburger
+        include ../component/c_hamburger
+  .l-header-sp.p-header-sp.sp
+    .p-header-sp__inner
+      nav.p-header-sp-nav
+        ul.p-header-sp-nav__wrapper
+          li.p-header-sp-nav__item
+            a(href="#concept").p-header-sp-nav__link concept
+          li.p-header-sp-nav__item
+            a(href="#information").p-header-sp-nav__link information
+          li.p-header-sp-nav__item
+            a(href="#tenant").p-header-sp-nav__link tenant
+          li.p-header-sp-nav__item
+            a(href="#facility").p-header-sp-nav__link 施設概要
+          li.p-header-sp-nav__item
+            a(href="#contact").p-header-sp-nav__link お問合せ
+else
+  header.p-header-sp-menu.sp
+    .p-header-sp-menu__inner.section-inner
+      .p-header-sp-menu__logo
+        a(href="#")
+          img(src=imgPath + "logo-black.png", alt="ロゴ")
+      .p-header-sp-menu__hamburger
+        include ../component/c_hamburger
+  .l-header-sp.p-header-sp.sp
+    .p-header-sp__inner
+      nav.p-header-sp-nav
+        ul.p-header-sp-nav__wrapper
+          li.p-header-sp-nav__item
+            a(href="#concept").p-header-sp-nav__link concept
+          li.p-header-sp-nav__item
+            a(href="#information").p-header-sp-nav__link information
+          li.p-header-sp-nav__item
+            a(href="#tenant").p-header-sp-nav__link tenant
+          li.p-header-sp-nav__item
+            a(href="#facility").p-header-sp-nav__link 施設概要
+          li.p-header-sp-nav__item
+            a(href="#contact").p-header-sp-nav__link お問合せ

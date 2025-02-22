@@ -13,6 +13,11 @@
     text-align: left;
   }
 }
+.p-cafe__img {
+  @include g.mq(md,max) {
+    margin-top: g.fz(102);
+  }
+}
 .p-cafe__img.section-inner {
   @include g.mq(md,max) {
     padding-left: initial;
